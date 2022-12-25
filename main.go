@@ -8,9 +8,6 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-var r struct {
-}
-
 func main() {
 	app := fiber.New()
 
