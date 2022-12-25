@@ -16,7 +16,7 @@ func main() {
 
 	app.Get("/beef/summary", func(c *fiber.Ctx) error {
 		serviceBeef := services.NewBeefService()
-		err := serviceBeef.Read("./files/beefe.txt")
+		err := serviceBeef.Read("./files/beef.txt")
 		if err != nil {
 			c.Status(http.StatusInternalServerError)
 			return c.JSON(fiber.Map{
