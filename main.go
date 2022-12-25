@@ -16,11 +16,11 @@ func main() {
 
 	app.Get("/beef/summary", func(c *fiber.Ctx) error {
 		serviceBeef := services.NewBeefService()
-		err := serviceBeef.Read("./files/beef.txt")
+		err := serviceBeef.Read("./files/beefe.txt")
 		if err != nil {
 			c.Status(http.StatusInternalServerError)
 			return c.JSON(fiber.Map{
-				"message": err,
+				"message": err.Error(),
 			})
 		}
 
